@@ -6,7 +6,7 @@ stages:
     - script: echo Building!
 - stage: Test
   dependsOn: Build
-  condition: passed()
+  condition: succeeded()
   jobs:
   - job: TestOnWindows
     steps:
